@@ -1,0 +1,26 @@
+{
+  "id": "shopify-general",
+  "name": "Shopify Store Owner",
+  "cdp_commands": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "timezone": "America/Los_Angeles",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "geolocation": {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "accuracy": 50
+    },
+    "webgl": {
+      "vendor": "Apple Inc.",
+      "renderer": "Apple M2"
+    },
+    "screen": {
+      "width": 1440,
+      "height": 900,
+      "scale": 2
+    }
+  }
+}

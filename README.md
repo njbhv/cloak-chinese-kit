@@ -1,47 +1,180 @@
-# CloakBrowser Chu Hai Yi Jian Bu Shu Bao
+# ðŸ›¡ï¸ CloakBrowser å‡ºæµ·ä¸€é”®éƒ¨ç½²åŒ…
 
-> CloakBrowser GitHub 19.6K Stars ji yu Chromium de yin shen liu lan qi
-> ke rao guo suo you zhu liu Bot jian ce.
-> Ben cang ku ti gong zhong wen yi jian bu shu bao,
-> rang guo nei kuai jing dian shang, chu hai ying xiao ren yuan 5 fen zhong da hao huan jing.
+> **CloakBrowser**ï¼ˆGitHub 19.6Kâ­ï¼‰æ˜¯åŸºäºŽ Chromium çš„éšèº«æµè§ˆå™¨ï¼Œå¯ç»•è¿‡æ‰€æœ‰ä¸»æµ Bot æ£€æµ‹ã€‚
+> æœ¬ä»“åº“æä¾›**ä¸­æ–‡ä¸€é”®éƒ¨ç½²åŒ…**ï¼Œè®©å›½å†…è·¨å¢ƒç”µå•†ã€å‡ºæµ·è¥é”€äººå‘˜ 5 åˆ†é’Ÿæ­å¥½çŽ¯å¢ƒã€‚
 
-## Shi Yong Ren Qun
-- Kuai Jing Dian Shang Mai Jia: Amazon/Shopify duo dian pu guan li
-- Chu Hai She Mei Yun Ying: TikTok/Instagram duo zhang hao
-- Du Li Kai Fa Zhe: Pa chong/zi dong hua fan jian ce
-- Shi Chang Diao Yan: Wei zhuang cheng dang di yong hu
+---
 
-## Te Se
-- Zhong wen yi jian bu shu: Docker Compose yi tiao ming ling qi dong
-- Yu zhi zhi wen mo ban: Amazon/TikTok/She mei zhuan yong pei zhi
-- Dai li ji cheng: Zhi chi HTTP/SOCKS5 dai li
-- VNC yuan cheng zhuo mian: Xiang cao zuo ben di liu lan qi yi yang
-- DevTools ji cheng: Zhi chi Playwright zi dong hua
-- Quan bu kai yuan mian fei
+## ðŸŽ¯ é€‚ç”¨äººç¾¤
 
-## Kuai Su Kai Shi
+| äººç¾¤ | åœºæ™¯ |
+|------|------|
+| ðŸª **è·¨å¢ƒç”µå•†å–å®¶** | äºšé©¬é€Š/Shopify å¤šåº—é“ºç®¡ç†ã€åº—é“ºå…»å· |
+| ðŸ“± **å‡ºæµ·ç¤¾åª’è¿è¥** | TikTok/Instagram/Facebook å¤šè´¦å·è¿è¥ |
+| ðŸ”§ **ç‹¬ç«‹å¼€å‘è€…** | çˆ¬è™«/è‡ªåŠ¨åŒ–é‡‡é›†éœ€è¦åæ£€æµ‹çŽ¯å¢ƒ |
+| ðŸ“Š **å¸‚åœºè°ƒç ”** | ä¼ªè£…æˆå½“åœ°ç”¨æˆ·æŸ¥çœ‹ç«žå“ä¿¡æ¯ |
 
-git clone https://github.com/njbhv/cloak-chinese-kit
+---
+
+## âœ¨ ç‰¹è‰²
+
+- âœ… **ä¸­æ–‡ä¸€é”®éƒ¨ç½²** â€” Docker Compose ä¸€æ¡å‘½ä»¤å¯åŠ¨
+- âœ… **é¢„ç½®æŒ‡çº¹æ¨¡æ¿** â€” äºšé©¬é€Š/TikTok/é€šç”¨ç¤¾åª’ä¸“ç”¨é…ç½®
+- âœ… **ä»£ç†é›†æˆ** â€” æ”¯æŒ HTTP/SOCKS5 ä»£ç†
+- âœ… **VNC è¿œç¨‹æ¡Œé¢** â€” åƒæ“ä½œæœ¬åœ°æµè§ˆå™¨ä¸€æ ·æ“ä½œ
+- âœ… **DevTools é›†æˆ** â€” æ”¯æŒ Playwright/Puppeteer è‡ªåŠ¨åŒ–
+- âœ… **å…¨éƒ¨å¼€æºå…è´¹** â€” ä¸€é”®åŒ…å…è´¹ï¼ŒPro ç‰ˆ $9.99 æ›´å¤šåŠŸèƒ½
+
+---
+
+## ðŸš€ å¿«é€Ÿå¼€å§‹
+
+### å‰æ
+
+- å®‰è£… Docker + Docker Compose
+- ä¸€ä¸ªæµ·å¤–ä»£ç†ï¼ˆå¦‚éœ€ï¼Œæ”¯æŒ HTTP/SOCKS5ï¼‰
+
+### ä¸€æ­¥å¯åŠ¨
+
+```bash
+# å…‹éš†ä»“åº“
+git clone https://github.com/YOUR_USERNAME/cloak-chinese-kit
 cd cloak-chinese-kit
+
+# é…ç½®ä»£ç†ï¼ˆå¯é€‰ï¼‰
+.\scripts\proxy-setup.ps1 -Type socks5 -Host 1.2.3.4 -Port 1080
+
+# ä¸€é”®å¯åŠ¨ï¼
 docker compose up -d
+```
 
-VNC lian jie: localhost:5900 mi ma: cloak2026
-DevTools: ws://localhost:9222
+### è¿žæŽ¥ä½¿ç”¨
 
-## Jia Ge
-- Mian fei ban: quan bu kai yuan, ji ben gong neng wan zheng
-- Pro ban: 9.99 USD yi ci mai duan
-  - 20+ zhi wen mo ban
-  - Dai li chi zi dong pei zhi
-  - Shi pin jiao cheng
-  - Wei xin/Telegram qun zhi chi
+| æ–¹å¼ | åœ°å€ | ç”¨é€” |
+|------|------|------|
+| ðŸ”Œ **VNC Viewer** | `localhost:5900` | è¿œç¨‹æ¡Œé¢æµè§ˆ |
+| ðŸ”§ **DevTools** | `ws://localhost:9222` | è‡ªåŠ¨åŒ–è„šæœ¬ |
+| ðŸŒ **æµè§ˆå™¨** | å®¹å™¨å†…æ‰“å¼€ | æ­£å¸¸æµè§ˆ |
 
-## Fu Kuan Fang Shi
-Jie shou TRON / Solana / Arbitrum / Polygon
+VNC å¯†ç : `cloak2026`
 
-TRON: TCXucuhPXmk9abvhzJMu38SsnnVZwW3efa
-Solana: Fg8PiJaWB1Y9WeGG6fQJZp1K3GLiiQGFYMnqXLKSVEM1
+---
+
+## âš™ï¸ é…ç½®è¯¦è§£
+
+### ä»£ç†é…ç½®
+
+```bash
+# HTTP ä»£ç†
+docker compose run -e CLOAK_PROXY_TYPE=http -e CLOAK_PROXY_HOST=ä»£ç†IP -e CLOAK_PROXY_PORT=3128
+
+# SOCKS5 ä»£ç†ï¼ˆæŽ¨èï¼‰
+docker compose run -e CLOAK_PROXY_TYPE=socks5 -e CLOAK_PROXY_HOST=ä»£ç†IP -e CLOAK_PROXY_PORT=1080
+```
+
+### åˆ‡æ¢æŒ‡çº¹é…ç½®
+
+```bash
+# äºšé©¬é€Šå–å®¶æ¨¡å¼
+docker compose run -e CLOAK_PROFILE=amazon-seller
+
+# TikTok è¥é”€æ¨¡å¼
+docker compose run -e CLOAK_PROFILE=tiktok-marketer
+
+# é€šç”¨ç¤¾åª’æ¨¡å¼ï¼ˆé»˜è®¤ï¼‰
+docker compose run -e CLOAK_PROFILE=social-media-general
+```
+
+---
+
+## ðŸ“ é¡¹ç›®ç»“æž„
+
+```
+cloak-chinese-kit/
+â”œâ”€â”€ docker-compose.yml       # ä¸€é”®å¯åŠ¨
+â”œâ”€â”€ docker/
+â”‚   â”œâ”€â”€ Dockerfile           # å®¹å™¨æž„å»º
+â”‚   â””â”€â”€ entrypoint.sh        # å¯åŠ¨è„šæœ¬
+â”œâ”€â”€ scripts/
+â”‚   â”œâ”€â”€ proxy-setup.ps1      # Windows ä»£ç†é…ç½®
+â”‚   â””â”€â”€ proxy-setup.sh       # Linux/Mac ä»£ç†é…ç½®
+â”œâ”€â”€ profiles/
+â”‚   â”œâ”€â”€ amazon-seller.yaml   # äºšé©¬é€ŠæŒ‡çº¹
+â”‚   â”œâ”€â”€ tiktok-marketer.yaml # TikTok æŒ‡çº¹
+â”‚   â””â”€â”€ social-media-general.yaml # é€šç”¨æŒ‡çº¹
+â””â”€â”€ docs/
+    â””â”€â”€ usage.md             # è¯¦ç»†ä½¿ç”¨è¯´æ˜Ž
+```
+
+---
+
+## ðŸ› ï¸ ä½¿ç”¨åœºæ™¯å®žä¾‹
+
+### åœºæ™¯ 1ï¼šäºšé©¬é€Šå¤šåº—é“ºç®¡ç†
+
+```bash
+# åº—1 - ç¾Žå›½ç«™
+docker compose -p shop-us up -d
+# åº—2 - æ¬§æ´²ç«™ (æ”¹ä»£ç†å’ŒæŒ‡çº¹)
+docker compose -p shop-eu up -d
+```
+
+### åœºæ™¯ 2ï¼šTikTok æ‰¹é‡è¿è¥
+
+```bash
+# é€šè¿‡è„šæœ¬å¯åŠ¨å¤šä¸ªç‹¬ç«‹å®žä¾‹
+for i in 1 2 3 4 5; do
+  docker compose -p tiktok-$i up -d
+done
+```
+
+### åœºæ™¯ 3ï¼šPlaywright è‡ªåŠ¨åŒ–
+
+```javascript
+const browser = await chromium.connectOverCDP('http://localhost:9222');
+// CloakBrowser è‡ªåŠ¨å¤„ç†æŒ‡çº¹éšèº«
+// æ— éœ€é¢å¤–é…ç½® stealth æ’ä»¶
+```
+
+---
+
+## ðŸ’° ç‰ˆæœ¬å¯¹æ¯”
+
+| åŠŸèƒ½ | å…è´¹ç‰ˆï¼ˆå½“å‰ï¼‰ | Pro ç‰ˆï¼ˆ$9.99ï¼‰ |
+|------|---------------|-----------------|
+| åŸºç¡€éƒ¨ç½² | âœ… | âœ… |
+| æŒ‡çº¹æ¨¡æ¿ | 3 ä¸ª | 20 ä¸ª+ |
+| ä»£ç†é›†æˆ | æ‰‹åŠ¨é…ç½® | ä¸€é”®è„šæœ¬+ä»£ç†æ±  |
+| å¤šå¼€ç®¡ç† | æ‰‹åŠ¨ docker | ç®¡ç†é¢æ¿ |
+| è§†é¢‘æ•™ç¨‹ | - | âœ… 5 åˆ†é’Ÿæ•™ç¨‹ |
+| æŠ€æœ¯æ”¯æŒ | GitHub Issues | å¾®ä¿¡/Telegram ç¾¤ |
+
+**è´­ä¹° Pro ç‰ˆï¼š**
+```text
+TRON:    TCXucuhPXmk9abvhzJMu38SsnnVZwW3efa
 Arbitrum: 0xb130639050DeDC444EbA69A1c19162Bf754e7CcA
+Solana:  Fg8PiJaWB1Y9WeGG6fQJZp1K3GLiiQGFYMnqXLKSVEM1
 Polygon: 0xB3F3a3DF81E57aacD13fe38e5C72765c4Ca0B47E
+```
 
-Fu kuan hou fa TXID dao GitHub Issues huo Telegram, 24xiao shi nei fa song Pro ji huo bao.
+ä»˜æ¬¾åŽå‘é€ TXID åˆ° GitHub Issues æˆ– Telegramï¼Œ24 å°æ—¶å†…å‘é€ Pro æ¿€æ´»åŒ…ã€‚
+
+---
+
+## ðŸ¤ è´¡çŒ®
+
+æ¬¢è¿Žæ Issue å’Œ PRã€‚  
+ç›®å‰éœ€è¦å¸®åŠ©çš„ï¼šæ›´å¤šå¹³å°çš„æŒ‡çº¹é…ç½®ã€è‹±æ–‡æ–‡æ¡£ç¿»è¯‘ã€‚
+
+---
+
+## ðŸ“œ å…è´£å£°æ˜Ž
+
+æœ¬å·¥å…·ä»…ç”¨äºŽåˆæ³•çš„è·¨å¢ƒä¸šåŠ¡ã€å¸‚åœºè°ƒç ”å’Œè‡ªåŠ¨åŒ–æµ‹è¯•ã€‚  
+è¯·éµå®ˆå„å¹³å°æœåŠ¡æ¡æ¬¾ï¼Œä½¿ç”¨è€…è‡ªè¡Œæ‰¿æ‹…æ³•å¾‹è´£ä»»ã€‚
+
+---
+
+## â­ æ”¯æŒä¸€ä¸‹
+
+å¦‚æžœè§‰å¾—æœ‰ç”¨ï¼Œç»™ä¸ª Star â­ æ”¯æŒå¼€æºï¼

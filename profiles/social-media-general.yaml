@@ -1,0 +1,19 @@
+# CloakBrowser 指纹配置模板
+# 通用海外社交媒体运营
+
+platform: "social-media-general"
+name: "社交媒体运营通用"
+description: "模拟普通欧美用户，适合多平台运营"
+settings:
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  platform: "Win32"
+  languages: ["en-US", "en", "zh-CN"]
+  timezone: "America/Los_Angeles"
+  webgl_vendor: "Google Inc. (NVIDIA)"
+  webgl_renderer: "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060)"
+  screen_resolution: "1920x1080"
+  color_depth: 24
+  device_memory: 16
+  hardware_concurrency: 12
+  touch_support: false
+  do_not_track: false

@@ -1,0 +1,26 @@
+{
+  "id": "etsy-seller",
+  "name": "Etsy Seller",
+  "cdp_commands": {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "timezone": "America/Los_Angeles",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "geolocation": {
+      "latitude": 45.5152,
+      "longitude": -122.6784,
+      "accuracy": 50
+    },
+    "webgl": {
+      "vendor": "Google Inc. (AMD)",
+      "renderer": "ANGLE (AMD Radeon Graphics)"
+    },
+    "screen": {
+      "width": 1366,
+      "height": 768,
+      "scale": 1
+    }
+  }
+}

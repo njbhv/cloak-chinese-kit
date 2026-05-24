@@ -1,180 +1,77 @@
-# ðŸ›¡ï¸ CloakBrowser å‡ºæµ·ä¸€é”®éƒ¨ç½²åŒ…
+# 🛡️ CloakBrowser 出海一键部署包
 
-> **CloakBrowser**ï¼ˆGitHub 19.6Kâ­ï¼‰æ˜¯åŸºäºŽ Chromium çš„éšèº«æµè§ˆå™¨ï¼Œå¯ç»•è¿‡æ‰€æœ‰ä¸»æµ Bot æ£€æµ‹ã€‚
-> æœ¬ä»“åº“æä¾›**ä¸­æ–‡ä¸€é”®éƒ¨ç½²åŒ…**ï¼Œè®©å›½å†…è·¨å¢ƒç”µå•†ã€å‡ºæµ·è¥é”€äººå‘˜ 5 åˆ†é’Ÿæ­å¥½çŽ¯å¢ƒã€‚
+> **CloakBrowser**（GitHub 19.6K⭐）是基于 Chromium 的隐身浏览器，可绕过所有主流 Bot 检测。
+> 本仓库提供**中文一键部署包**，让国内跨境电商、出海营销人员 5 分钟搭好环境。
 
 ---
 
-## ðŸŽ¯ é€‚ç”¨äººç¾¤
+## 🎯适用人群
 
-| äººç¾¤ | åœºæ™¯ |
+| 人群 | 场景 |
 |------|------|
-| ðŸª **è·¨å¢ƒç”µå•†å–å®¶** | äºšé©¬é€Š/Shopify å¤šåº—é“ºç®¡ç†ã€åº—é“ºå…»å· |
-| ðŸ“± **å‡ºæµ·ç¤¾åª’è¿è¥** | TikTok/Instagram/Facebook å¤šè´¦å·è¿è¥ |
-| ðŸ”§ **ç‹¬ç«‹å¼€å‘è€…** | çˆ¬è™«/è‡ªåŠ¨åŒ–é‡‡é›†éœ€è¦åæ£€æµ‹çŽ¯å¢ƒ |
-| ðŸ“Š **å¸‚åœºè°ƒç ”** | ä¼ªè£…æˆå½“åœ°ç”¨æˆ·æŸ¥çœ‹ç«žå“ä¿¡æ¯ |
+| 🏪 跨境电商卖家 | 亚马逊/Shopify 多店铺管理、店铺养号 |
+| 📱 出海社媒运营 | TikTok/Instagram/Facebook 多账号运营 |
+| 🔧 独立开发者 | 爬虫/自动化采集需要反检测环境 |
+| 📊 市场调研 | 伪装成当地用户查看竞品信息 |
 
 ---
 
-## âœ¨ ç‰¹è‰²
+## ✨ 特色
 
-- âœ… **ä¸­æ–‡ä¸€é”®éƒ¨ç½²** â€” Docker Compose ä¸€æ¡å‘½ä»¤å¯åŠ¨
-- âœ… **é¢„ç½®æŒ‡çº¹æ¨¡æ¿** â€” äºšé©¬é€Š/TikTok/é€šç”¨ç¤¾åª’ä¸“ç”¨é…ç½®
-- âœ… **ä»£ç†é›†æˆ** â€” æ”¯æŒ HTTP/SOCKS5 ä»£ç†
-- âœ… **VNC è¿œç¨‹æ¡Œé¢** â€” åƒæ“ä½œæœ¬åœ°æµè§ˆå™¨ä¸€æ ·æ“ä½œ
-- âœ… **DevTools é›†æˆ** â€” æ”¯æŒ Playwright/Puppeteer è‡ªåŠ¨åŒ–
-- âœ… **å…¨éƒ¨å¼€æºå…è´¹** â€” ä¸€é”®åŒ…å…è´¹ï¼ŒPro ç‰ˆ $9.99 æ›´å¤šåŠŸèƒ½
+- ✅ **中文一键部署** — Docker Compose 一条命令启动
+- ✅ **预置指纹模板** — 亚马逊/TikTok/通用社媒专用配置
+- ✅ **代理集成** — 支持 HTTP/SOCKS5 代理
+- ✅ **VNC 远程桌面** — 像操作本地浏览器一样操作
+- ✅ **DevTools 集成** — 支持 Playwright/Puppeteer 自动化
+- ✅ **全部开源免费** — 一键包免费，Pro 版 $9.99 更多功能
 
 ---
 
-## ðŸš€ å¿«é€Ÿå¼€å§‹
+## 🚀 快速开始
 
-### å‰æ
+### 前提
+- 安装 Docker + Docker Compose
+- 一个海外代理（如需，支持 HTTP/SOCKS5）
 
-- å®‰è£… Docker + Docker Compose
-- ä¸€ä¸ªæµ·å¤–ä»£ç†ï¼ˆå¦‚éœ€ï¼Œæ”¯æŒ HTTP/SOCKS5ï¼‰
-
-### ä¸€æ­¥å¯åŠ¨
+### 一步启动
 
 ```bash
-# å…‹éš†ä»“åº“
-git clone https://github.com/YOUR_USERNAME/cloak-chinese-kit
+git clone https://github.com/njbhv/cloak-chinese-kit
 cd cloak-chinese-kit
-
-# é…ç½®ä»£ç†ï¼ˆå¯é€‰ï¼‰
-.\scripts\proxy-setup.ps1 -Type socks5 -Host 1.2.3.4 -Port 1080
-
-# ä¸€é”®å¯åŠ¨ï¼
 docker compose up -d
 ```
 
-### è¿žæŽ¥ä½¿ç”¨
+### 连接使用
 
-| æ–¹å¼ | åœ°å€ | ç”¨é€” |
+| 方式 | 地址 | 用途 |
 |------|------|------|
-| ðŸ”Œ **VNC Viewer** | `localhost:5900` | è¿œç¨‹æ¡Œé¢æµè§ˆ |
-| ðŸ”§ **DevTools** | `ws://localhost:9222` | è‡ªåŠ¨åŒ–è„šæœ¬ |
-| ðŸŒ **æµè§ˆå™¨** | å®¹å™¨å†…æ‰“å¼€ | æ­£å¸¸æµè§ˆ |
+| 🔌 VNC Viewer | localhost:5900 | 远程桌面浏览 |
+| 🔧 DevTools | ws://localhost:9222 | 自动化脚本 |
+| 🌐 浏览器 | 容器内打开 | 正常浏览 |
 
-VNC å¯†ç : `cloak2026`
-
----
-
-## âš™ï¸ é…ç½®è¯¦è§£
-
-### ä»£ç†é…ç½®
-
-```bash
-# HTTP ä»£ç†
-docker compose run -e CLOAK_PROXY_TYPE=http -e CLOAK_PROXY_HOST=ä»£ç†IP -e CLOAK_PROXY_PORT=3128
-
-# SOCKS5 ä»£ç†ï¼ˆæŽ¨èï¼‰
-docker compose run -e CLOAK_PROXY_TYPE=socks5 -e CLOAK_PROXY_HOST=ä»£ç†IP -e CLOAK_PROXY_PORT=1080
-```
-
-### åˆ‡æ¢æŒ‡çº¹é…ç½®
-
-```bash
-# äºšé©¬é€Šå–å®¶æ¨¡å¼
-docker compose run -e CLOAK_PROFILE=amazon-seller
-
-# TikTok è¥é”€æ¨¡å¼
-docker compose run -e CLOAK_PROFILE=tiktok-marketer
-
-# é€šç”¨ç¤¾åª’æ¨¡å¼ï¼ˆé»˜è®¤ï¼‰
-docker compose run -e CLOAK_PROFILE=social-media-general
-```
+VNC 密码: cloak2026
 
 ---
 
-## ðŸ“ é¡¹ç›®ç»“æž„
+## 💰 价格
 
-```
-cloak-chinese-kit/
-â”œâ”€â”€ docker-compose.yml       # ä¸€é”®å¯åŠ¨
-â”œâ”€â”€ docker/
-â”‚   â”œâ”€â”€ Dockerfile           # å®¹å™¨æž„å»º
-â”‚   â””â”€â”€ entrypoint.sh        # å¯åŠ¨è„šæœ¬
-â”œâ”€â”€ scripts/
-â”‚   â”œâ”€â”€ proxy-setup.ps1      # Windows ä»£ç†é…ç½®
-â”‚   â””â”€â”€ proxy-setup.sh       # Linux/Mac ä»£ç†é…ç½®
-â”œâ”€â”€ profiles/
-â”‚   â”œâ”€â”€ amazon-seller.yaml   # äºšé©¬é€ŠæŒ‡çº¹
-â”‚   â”œâ”€â”€ tiktok-marketer.yaml # TikTok æŒ‡çº¹
-â”‚   â””â”€â”€ social-media-general.yaml # é€šç”¨æŒ‡çº¹
-â””â”€â”€ docs/
-    â””â”€â”€ usage.md             # è¯¦ç»†ä½¿ç”¨è¯´æ˜Ž
-```
-
----
-
-## ðŸ› ï¸ ä½¿ç”¨åœºæ™¯å®žä¾‹
-
-### åœºæ™¯ 1ï¼šäºšé©¬é€Šå¤šåº—é“ºç®¡ç†
-
-```bash
-# åº—1 - ç¾Žå›½ç«™
-docker compose -p shop-us up -d
-# åº—2 - æ¬§æ´²ç«™ (æ”¹ä»£ç†å’ŒæŒ‡çº¹)
-docker compose -p shop-eu up -d
-```
-
-### åœºæ™¯ 2ï¼šTikTok æ‰¹é‡è¿è¥
-
-```bash
-# é€šè¿‡è„šæœ¬å¯åŠ¨å¤šä¸ªç‹¬ç«‹å®žä¾‹
-for i in 1 2 3 4 5; do
-  docker compose -p tiktok-$i up -d
-done
-```
-
-### åœºæ™¯ 3ï¼šPlaywright è‡ªåŠ¨åŒ–
-
-```javascript
-const browser = await chromium.connectOverCDP('http://localhost:9222');
-// CloakBrowser è‡ªåŠ¨å¤„ç†æŒ‡çº¹éšèº«
-// æ— éœ€é¢å¤–é…ç½® stealth æ’ä»¶
-```
-
----
-
-## ðŸ’° ç‰ˆæœ¬å¯¹æ¯”
-
-| åŠŸèƒ½ | å…è´¹ç‰ˆï¼ˆå½“å‰ï¼‰ | Pro ç‰ˆï¼ˆ$9.99ï¼‰ |
+| 功能 | 免费版 | Pro 版 ($9.99) |
 |------|---------------|-----------------|
-| åŸºç¡€éƒ¨ç½² | âœ… | âœ… |
-| æŒ‡çº¹æ¨¡æ¿ | 3 ä¸ª | 20 ä¸ª+ |
-| ä»£ç†é›†æˆ | æ‰‹åŠ¨é…ç½® | ä¸€é”®è„šæœ¬+ä»£ç†æ±  |
-| å¤šå¼€ç®¡ç† | æ‰‹åŠ¨ docker | ç®¡ç†é¢æ¿ |
-| è§†é¢‘æ•™ç¨‹ | - | âœ… 5 åˆ†é’Ÿæ•™ç¨‹ |
-| æŠ€æœ¯æ”¯æŒ | GitHub Issues | å¾®ä¿¡/Telegram ç¾¤ |
+| 基础部署 | ✅ | ✅ |
+| 指纹模板 | 3 个 | 20+ 个 |
+| 代理集成 | 手动配置 | 一键脚本+代理池 |
+| 多开管理 | 手动 docker | 管理面板 |
+| 视频教程 | - | 5 分钟教程 |
+| 技术支持 | GitHub Issues | 微信/Telegram 群 |
 
-**è´­ä¹° Pro ç‰ˆï¼š**
-```text
-TRON:    TCXucuhPXmk9abvhzJMu38SsnnVZwW3efa
-Arbitrum: 0xb130639050DeDC444EbA69A1c19162Bf754e7CcA
-Solana:  Fg8PiJaWB1Y9WeGG6fQJZp1K3GLiiQGFYMnqXLKSVEM1
-Polygon: 0xB3F3a3DF81E57aacD13fe38e5C72765c4Ca0B47E
+---
+
+## 💸 付款方式
+
+接受 TRON / Solana / Arbitrum / Polygon
+
 ```
-
-ä»˜æ¬¾åŽå‘é€ TXID åˆ° GitHub Issues æˆ– Telegramï¼Œ24 å°æ—¶å†…å‘é€ Pro æ¿€æ´»åŒ…ã€‚
-
----
-
-## ðŸ¤ è´¡çŒ®
-
-æ¬¢è¿Žæ Issue å’Œ PRã€‚  
-ç›®å‰éœ€è¦å¸®åŠ©çš„ï¼šæ›´å¤šå¹³å°çš„æŒ‡çº¹é…ç½®ã€è‹±æ–‡æ–‡æ¡£ç¿»è¯‘ã€‚
-
----
-
-## ðŸ“œ å…è´£å£°æ˜Ž
-
-æœ¬å·¥å…·ä»…ç”¨äºŽåˆæ³•çš„è·¨å¢ƒä¸šåŠ¡ã€å¸‚åœºè°ƒç ”å’Œè‡ªåŠ¨åŒ–æµ‹è¯•ã€‚  
-è¯·éµå®ˆå„å¹³å°æœåŠ¡æ¡æ¬¾ï¼Œä½¿ç”¨è€…è‡ªè¡Œæ‰¿æ‹…æ³•å¾‹è´£ä»»ã€‚
-
----
-
-## â­ æ”¯æŒä¸€ä¸‹
-
-å¦‚æžœè§‰å¾—æœ‰ç”¨ï¼Œç»™ä¸ª Star â­ æ”¯æŒå¼€æºï¼
+TRON:    TCXucuhPXmk9abvhzJMu38SsnnVZwW3efa
+Solana:  Fg8PiJaWB1Y9WeGG6fQJZp1K3GLiiQGFYMnqXLKSVEM1
+Arbitrum: 0xb130639050DeDC444EbA69A1c19162Bf754e7CcA
+Polygon:  0xB3F3a3DF81E57aacD13fe38e5C72765c4Ca0B47E

@@ -1,0 +1,26 @@
+{
+  "id": "amazon-uk",
+  "name": "Amazon UK Seller",
+  "cdp_commands": {
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "timezone": "Europe/London",
+    "languages": [
+      "en-GB",
+      "en"
+    ],
+    "geolocation": {
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "accuracy": 50
+    },
+    "webgl": {
+      "vendor": "Google Inc. (NVIDIA)",
+      "renderer": "ANGLE (NVIDIA RTX 3060)"
+    },
+    "screen": {
+      "width": 1920,
+      "height": 1080,
+      "scale": 1
+    }
+  }
+}

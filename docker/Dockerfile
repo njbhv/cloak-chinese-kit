@@ -1,5 +1,5 @@
 # CloakBrowser Docker Image
-# 基于 Ubuntu，运行隐身 Chromium + VNC 远程桌面
+# åŸºäºŽ Ubuntuï¼Œè¿è¡Œéšèº« Chromium + VNC è¿œç¨‹æ¡Œé¢
 
 FROM ubuntu:22.04
 
@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV DISPLAY=:99
 ENV CLOAK_VERSION=latest
 
-# 安装依赖
+# å®‰è£…ä¾èµ–
 RUN apt-get update && apt-get install -y \
     wget curl unzip xvfb x11vnc fluxbox \
     fonts-wqy-zenhei fonts-wqy-microhei \
@@ -19,20 +19,26 @@ RUN apt-get update && apt-get install -y \
     libxcomposite1 libxdamage1 libxrandr2 \
     libpango-1.0-0 libcairo2 \
     libasound2 libatspi2.0-0 \
+    locales \
     ca-certificates \
     --no-install-recommends && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# 安装 CloakBrowser
-RUN mkdir -p /app && \
-    cd /app && \
-    # CloakBrowser 发布版本会自动下载
-    curl -sL "https://github.com/CloakHQ/CloakBrowser/releases/latest/download/cloak-linux.zip" -o cloak.zip && \
-    unzip -q cloak.zip -d /app/cloak && \
-    rm cloak.zip && \
-    chmod +x /app/cloak/cloak-browser
+# å®‰è£… CloakBrowser
+RUN mkdir -p /app/cloak && \
+    cd /tmp && \
+    curl -sL "https://github.com/CloakHQ/CloakBrowser/releases/latest/download/cloakbrowser-linux-x64.tar.gz" -o cloak.tar.gz && \
+    tar xzf cloak.tar.gz && \
+    mv chrome chrome_crashpad_handler chromedriver /app/cloak/ 2>/dev/null; \
+    mv *.so *.pak *.bin *.dat *.json /app/cloak/ 2>/dev/null; \
+    mv locales/ /app/cloak/ 2>/dev/null; \
+    mv vk_swiftshader_icd.json /app/cloak/ 2>/dev/null; \
+    rm -f cloak.tar.gz && \
+    ls -la /app/cloak/ && \
+    chmod +x /app/cloak/chrome && \
+    ln -sf /app/cloak/chrome /app/cloak/cloak-browser
 
-# 中文语言支持
+# ä¸­æ–‡è¯­è¨€æ”¯æŒ
 RUN locale-gen zh_CN.UTF-8 && \
     update-locale LANG=zh_CN.UTF-8
 
@@ -40,8 +46,8 @@ ENV LANG=zh_CN.UTF-8
 ENV LANGUAGE=zh_CN:zh
 ENV LC_ALL=zh_CN.UTF-8
 
-# 启动脚本
-COPY entrypoint.sh /entrypoint.sh
+# å¯åŠ¨è„šæœ¬
+COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 EXPOSE 5900 9222 8080

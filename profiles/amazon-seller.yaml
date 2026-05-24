@@ -1,0 +1,23 @@
+# CloakBrowser 指纹配置模板
+# 跨境电商平台专属指纹
+
+platform: "amazon-seller"
+name: "亚马逊卖家专用"
+description: "模拟美国本土卖家浏览器指纹"
+settings:
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+  platform: "Win32"
+  languages: ["en-US", "en"]
+  timezone: "America/New_York"
+  geolocation:
+    latitude: 40.7128
+    longitude: -74.0060
+  webgl_vendor: "Intel Inc."
+  webgl_renderer: "Intel Iris OpenGL Engine"
+  audio_context: "Intel"
+  screen_resolution: "1920x1080"
+  color_depth: 24
+  device_memory: 8
+  hardware_concurrency: 8
+  touch_support: false
+  do_not_track: false

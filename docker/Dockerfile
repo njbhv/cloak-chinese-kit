@@ -13,7 +13,7 @@ ENV CLOAK_VERSION=latest
 # å®‰è£…ä¾èµ–
 RUN apt-get update && apt-get install -y \
     wget curl unzip xvfb x11vnc fluxbox \
-    fonts-wqy-zenhei fonts-wqy-microhei \
+    fonts-wqy-zenhei fonts-wqy-microhei libcups2 \
     libnss3 libnspr4 libatk-bridge2.0-0 \
     libdrm2 libgbm1 libxkbcommon0 \
     libxcomposite1 libxdamage1 libxrandr2 \

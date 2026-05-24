@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  cloak-browser:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: cloak-browser
+    ports:
+      - "5900:5900"    # VNC (for viewing browser)
+      - "9222:9222"    # DevTools protocol
+      - "8080:8080"    # Health check / management API
+    volumes:
+      - ./profiles:/app/profiles:rw
+      - ./scripts:/app/scripts:ro
+      - cloak_data:/app/data
+    environment:
+      - CLOAK_PROXY_TYPE=${CLOAK_PROXY_TYPE:-socks5}
+      - CLOAK_PROXY_HOST=${CLOAK_PROXY_HOST:-}
+      - CLOAK_PROXY_PORT=${CLOAK_PROXY_PORT:-1080}
+      - CLOAK_PROXY_USER=${CLOAK_PROXY_USER:-}
+      - CLOAK_PROXY_PASS=${CLOAK_PROXY_PASS:-}
+      - CLOAK_PROFILE=${CLOAK_PROFILE:-default}
+      - CLOAK_HEADLESS=${CLOAK_HEADLESS:-false}
+      - VNC_PASSWORD=${VNC_PASSWORD:-cloak2026}
+      - DISPLAY=:99
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    shm_size: 2gb
+
+volumes:
+  cloak_data:

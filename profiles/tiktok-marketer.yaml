@@ -1,0 +1,19 @@
+# CloakBrowser 指纹配置模板
+# TikTok/Instagram 营销专用
+
+platform: "tiktok-marketer"
+name: "TikTok 营销专用"
+description: "模拟美国创作者浏览器指纹"
+settings:
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+  platform: "MacIntel"
+  languages: ["en-US", "en"]
+  timezone: "America/Chicago"
+  webgl_vendor: "Apple Inc."
+  webgl_renderer: "Apple M2"
+  screen_resolution: "1440x900"
+  color_depth: 30
+  device_memory: 16
+  hardware_concurrency: 8
+  touch_support: false
+  do_not_track: false

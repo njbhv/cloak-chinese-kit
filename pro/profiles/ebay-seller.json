@@ -1,0 +1,26 @@
+{
+  "id": "ebay-seller",
+  "name": "eBay Seller",
+  "cdp_commands": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+    "timezone": "America/Los_Angeles",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "geolocation": {
+      "latitude": 37.3382,
+      "longitude": -121.8863,
+      "accuracy": 50
+    },
+    "webgl": {
+      "vendor": "Apple Inc.",
+      "renderer": "Apple M1"
+    },
+    "screen": {
+      "width": 1680,
+      "height": 1050,
+      "scale": 2
+    }
+  }
+}
